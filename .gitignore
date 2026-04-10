@@ -39,3 +39,19 @@
 
 # debug information files
 *.dwo
+
+# Compiled files
+*.out
+*.exe
+*.o
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
