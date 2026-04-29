@@ -7,7 +7,7 @@ using namespace std;
 // minimum key value, from the set of vertices
 // not yet included in MST
 int minKey(vector<int> &key, vector<bool> &mstSet) {
-  
+
     // Initialize min value
     int min = INT_MAX, min_index;
 
@@ -24,7 +24,7 @@ void printMST(vector<int> &parent, vector<vector<int>> &graph) {
     cout << "Edge \tWeight\n";
     for (int i = 1; i < graph.size(); i++)
         cout << parent[i] << " - " << i << " \t"
-             << graph[parent[i]][i] << " \n";
+            << graph[parent[i]][i] << " \n";
 }
 
 // Function to construct and print MST for
@@ -33,7 +33,7 @@ void printMST(vector<int> &parent, vector<vector<int>> &graph) {
 void primMST(vector<vector<int>> &graph) {
     
     int V = graph.size();
-  
+
     // Array to store constructed MST
     vector<int> parent(V);
 
@@ -51,7 +51,7 @@ void primMST(vector<vector<int>> &graph) {
     // Make key 0 so that this vertex is picked as first
     // vertex.
     key[0] = 0;
-  
+
     // First node is always root of MST
     parent[0] = -1;
 
@@ -85,7 +85,7 @@ void primMST(vector<vector<int>> &graph) {
 }
 
 int main() {
-  	vector<vector<int>> graph = { { 0, 2, 0, 6, 0 },
+    vector<vector<int>> graph = { { 0, 2, 0, 6, 0 },
                         		{ 2, 0, 3, 8, 5 },
                         		{ 0, 3, 0, 0, 7 },
                         		{ 6, 8, 0, 0, 9 },
