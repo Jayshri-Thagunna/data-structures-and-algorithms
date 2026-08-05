@@ -78,3 +78,14 @@ int main() {
     cout << "After peek: " <<endl;
     s.display();
 }
+
+#include<iostream>
+using namespace std;
+
+//using LinkedList
+class Node{
+    public:
+        int data;
+        Node *next;
+};
+

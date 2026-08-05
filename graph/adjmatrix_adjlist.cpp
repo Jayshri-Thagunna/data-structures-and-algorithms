@@ -16,7 +16,7 @@ public:
 
     void addEdge(int u, int v) {
         matrix[u][v] = 1;
-        matrix[v][u] = 1; 
+        matrix[v][u] = 1;
     }
 
     void printGraph() {
