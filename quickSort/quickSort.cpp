@@ -38,11 +38,19 @@ void quickSort(vector<int>&arr, int low, int high){
 int main() {
     vector<int> arr = {8, 3, 7, 4, 9, 2, 6};
 
-    quickSort(arr, 0, arr.size() - 1);
+    int n = arr.size(); 
+    cout<<"before sorting: ";
+	for(int num : arr){
+		cout<<num<<" ";
+	}
 
-    for(int x : arr) {
-        cout << arr;
-    }
+    quickSort(arr, 0, n-1);
 
+	cout<<endl<<"after sorting: ";
+	for(int num : arr){
+		cout<<num<<" ";
+	}
+
+	cout<<endl;
     return 0;
 }
