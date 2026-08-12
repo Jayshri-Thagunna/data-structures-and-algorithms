@@ -1,32 +1,43 @@
-#include<iostream>
-#include<algorithm>
+#include <iostream>
+#include <vector>
 using namespace std;
 
-int main() {
-
-    //int arr[5] = {13, 23, 7, 12, 24};
-    int n;
-    cout << "Enter the size-";
-    cin >> n;
-
-    cout << "Eter the array- ";
-    int *arr = new int[n];
-    for(int i = 0; i < n; i++){
-        cin >> arr[i];
-    }
-
-    for(int i = 0; i < n - 1; i++){
-        for(int j = 0; j < n - i - 1; j++) {
-            if(arr[j] > arr[j+1]){
-                swap(arr[j], arr[j+1]);
+void bubbleSort(vector<int>& arr) {
+    int n = arr.size();
+    bool swapped;
+    
+    for (int i = 0; i < n - 1; i++) {
+        swapped = false;
+        
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr[j], arr[j + 1]);
+                swapped = true;
             }
         }
+        
+        if (!swapped) {
+            break;
+        }
     }
+}
 
-    for(int i = 0; i < n; i++){
-        cout << arr[i] << " ";
+int main() {
+    vector<int> myArray = {64, 34, 25, 12, 22, 11, 90};
+    
+    cout << "Unsorted array: ";
+    for (int num : myArray) {
+        cout << num << " ";
     }
     cout << "\n";
-    delete[] arr;
     
+    bubbleSort(myArray);
+    
+    cout << "Sorted array: ";
+    for (int num : myArray) {
+        cout << num << " ";
+    }
+    cout << "\n";
+    
+    return 0;
 }
